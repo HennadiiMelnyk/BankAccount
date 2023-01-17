@@ -1,4 +1,7 @@
-﻿namespace BankAccountApi.Accounts.Core.Domain.Services.Contracts;
+﻿using BankAccount.Shared.Application.RequestModels;
+using BankAccount.Shared.Application.ResponseModels;
+
+namespace BankAccountApi.Accounts.Core.Domain.Services.Contracts;
 
 /// <summary>
 /// 
@@ -11,5 +14,13 @@ public interface IUserService
     /// <param name="id"></param>
     /// <param name="ct"></param>
     /// <returns></returns>
-    Task GetUserByIdAsync(Guid id, CancellationToken ct);
+    Task<UserResponseModel> GetUserByIdAsync(Guid id, CancellationToken ct);
+
+    /// <summary>
+    /// Create user.
+    /// </summary>
+    /// <param name="userRequestModel"></param>
+    /// <param name="ct"></param>
+    /// <returns></returns>
+    Task<UserResponseModel> CreateAsync(UserRequestModel userRequestModel, CancellationToken ct);
 }
