@@ -10,19 +10,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountApiTests", "Bank
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transactions", "Transactions", "{4E3FCC48-B6B3-4C53-8D2F-B260D502193C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Accounts", "Accounts", "{1C2D4E20-90E0-4A10-BA7D-34DA690A376E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users", "Users", "{1C2D4E20-90E0-4A10-BA7D-34DA690A376E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountApi.Accounts.Core", "BankAccountApi.Accounts.Core\BankAccountApi.Accounts.Core.csproj", "{7D4FE2E9-701C-4760-B33F-F90ED6D95058}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountApi.Users.Core", "BankAccountApi.Users.Core\BankAccountApi.Users.Core.csproj", "{7D4FE2E9-701C-4760-B33F-F90ED6D95058}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Accounts.Api", "BankAccount.Accounts.Api\BankAccount.Accounts.Api.csproj", "{2BBEA7ED-9C8E-4D19-A587-A8AAF86EF56E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Users.Api", "BankAccount.Users.Api\BankAccount.Users.Api.csproj", "{2BBEA7ED-9C8E-4D19-A587-A8AAF86EF56E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{BF0929A4-907C-414B-AA8B-757D6B6249A6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Shared.Application", "BankAccount.Shared.Application\BankAccount.Shared.Application.csproj", "{8F61CE30-566E-4506-828F-E3459AE578D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Transaction.Core", "BankAccount.Transaction.Core\BankAccount.Transaction.Core.csproj", "{DE9946EA-D3B1-40BD-A34E-8A8884657C0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Transactions.Core", "BankAccount.Transactions.Core\BankAccount.Transactions.Core.csproj", "{DE9946EA-D3B1-40BD-A34E-8A8884657C0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountTransaction.Api", "BankAccountTransaction.Api\BankAccountTransaction.Api.csproj", "{2B4624B1-18F3-4EF9-B193-26DAC917B8DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Transactions.Api", "BankAccount.Transactions.Api\BankAccount.Transactions.Api.csproj", "{2B4624B1-18F3-4EF9-B193-26DAC917B8DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Shared.Api", "BankAccount.Shared.Api\BankAccount.Shared.Api.csproj", "{8850DEF5-9F38-4009-B51F-FE8AA7670B25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,6 +60,10 @@ Global
 		{2B4624B1-18F3-4EF9-B193-26DAC917B8DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B4624B1-18F3-4EF9-B193-26DAC917B8DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B4624B1-18F3-4EF9-B193-26DAC917B8DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8850DEF5-9F38-4009-B51F-FE8AA7670B25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8850DEF5-9F38-4009-B51F-FE8AA7670B25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8850DEF5-9F38-4009-B51F-FE8AA7670B25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8850DEF5-9F38-4009-B51F-FE8AA7670B25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A3206C23-67CD-48FE-9BDE-4DB5AE867F08} = {7D152CBE-E7A3-4952-A470-8799F40A745D}
@@ -69,5 +75,6 @@ Global
 		{8F61CE30-566E-4506-828F-E3459AE578D9} = {BF0929A4-907C-414B-AA8B-757D6B6249A6}
 		{DE9946EA-D3B1-40BD-A34E-8A8884657C0E} = {4E3FCC48-B6B3-4C53-8D2F-B260D502193C}
 		{2B4624B1-18F3-4EF9-B193-26DAC917B8DE} = {4E3FCC48-B6B3-4C53-8D2F-B260D502193C}
+		{8850DEF5-9F38-4009-B51F-FE8AA7670B25} = {BF0929A4-907C-414B-AA8B-757D6B6249A6}
 	EndGlobalSection
 EndGlobal

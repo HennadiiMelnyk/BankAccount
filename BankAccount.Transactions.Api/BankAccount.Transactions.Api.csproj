@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>BankAccount.Transactions.Api</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BankAccount.Shared.Api\BankAccount.Shared.Api.csproj" />
+      <ProjectReference Include="..\BankAccount.Transactions.Core\BankAccount.Transactions.Core.csproj" />
+    </ItemGroup>
+
+</Project>
