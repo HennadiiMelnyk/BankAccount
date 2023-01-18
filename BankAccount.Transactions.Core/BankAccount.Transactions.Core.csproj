@@ -10,10 +10,17 @@
     <ItemGroup>
       <PackageReference Include="AutoMapper" Version="12.0.1" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+      <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\BankAccount.Shared.Application\BankAccount.Shared.Application.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="MassTransit.Abstractions">
+        <HintPath>..\..\..\.nuget\packages\masstransit.abstractions\8.0.11-develop.844\lib\net6.0\MassTransit.Abstractions.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>

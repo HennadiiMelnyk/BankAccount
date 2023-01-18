@@ -3,7 +3,7 @@ using FluentValidation;
 
 namespace BankAccount.Shared.Application.RequestModelValidators;
 
-public class TransactionRequestModelValidator : AbstractValidator<TransactionRequestModel>
+public class TransactionRequestModelValidator : AbstractValidator<CreateTransactionRequest>
 {
     public TransactionRequestModelValidator()
     {

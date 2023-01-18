@@ -1,6 +1,6 @@
 ﻿using BankAccount.Shared.Api.Controllers;
 using BankAccount.Shared.Application.RequestModels;
-using BankAccount.Transaction.Core.Domain.Services.Contracts;
+using BankAccount.Transactions.Core.Domain.Services.Contracts;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,11 +11,11 @@ namespace BankAccount.Transactions.Api.Controllers
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
-    public class TransactionController : BaseController<TransactionRequestModel>
+    public class TransactionController : BaseController<CreateTransactionRequest>
     {
         private ITransactionService _transactionService;
-        private readonly IValidator<TransactionRequestModel> _validator;
-        public TransactionController(IValidator<TransactionRequestModel> modelValidator, IValidator<TransactionRequestModel> validator, ITransactionService transactionService) : base(modelValidator)
+        private readonly IValidator<CreateTransactionRequest> _validator;
+        public TransactionController(IValidator<CreateTransactionRequest> modelValidator, IValidator<CreateTransactionRequest> validator, ITransactionService transactionService) : base(modelValidator)
         {
             _validator = validator;
             _transactionService = transactionService;

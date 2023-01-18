@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using BankAccount.Shared.Application.RequestModels;
-using BankAccount.Transaction.Core.Domain.Services.Contracts;
 using BankAccount.Transactions.Core.Domain.Entities;
+using BankAccount.Transactions.Core.Domain.Services.Contracts;
 using BankAccount.Transactions.Core.Models.ResponseModels;
 using BankAccount.Transactions.Core.Repositories.Contracts;
 
@@ -28,7 +28,7 @@ namespace BankAccount.Transactions.Core.Domain.Services
             return transactionResponses;
         }
 
-        public async Task<TransactionResponseModel> CreateTransactionAsync(TransactionRequestModel request, CancellationToken ct)
+        public async Task<TransactionResponseModel> CreateTransactionAsync(CreateTransactionRequest request, CancellationToken ct)
         {
             var transactionToAdd = _autoMapper.Map<UserTransaction>(request);
 

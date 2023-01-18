@@ -1,7 +1,7 @@
 ﻿using BankAccount.Shared.Application.RequestModels;
 using BankAccount.Transactions.Core.Models.ResponseModels;
 
-namespace BankAccount.Transaction.Core.Domain.Services.Contracts;
+namespace BankAccount.Transactions.Core.Domain.Services.Contracts;
 
 public interface ITransactionService
 {
@@ -19,5 +19,5 @@ public interface ITransactionService
     /// <param name="request"></param>
     /// <param name="ct"></param>
     /// <returns></returns>
-    Task<TransactionResponseModel> CreateTransactionAsync(TransactionRequestModel request, CancellationToken ct);
+    Task<TransactionResponseModel> CreateTransactionAsync(CreateTransactionRequest request, CancellationToken ct);
 }

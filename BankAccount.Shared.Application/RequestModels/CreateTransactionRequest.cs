@@ -1,6 +1,6 @@
 ﻿namespace BankAccount.Shared.Application.RequestModels;
 
-public class TransactionRequestModel
+public class CreateTransactionRequest
 {
     public Guid UserId { get; init; }
     public decimal Amount { get; init; }
