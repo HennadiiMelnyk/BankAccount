@@ -10,7 +10,7 @@ namespace BankAccount.Shared.Infrastructure.Controllers
     /// Base controller.
     /// </summary>
     /// <typeparam name="TRequestModel">The request model.</typeparam>
-    public class BaseController<TRequestModel> : Controller
+    public class BaseController<TRequestModel> 
     {
         /// <summary>
         /// Model validator.

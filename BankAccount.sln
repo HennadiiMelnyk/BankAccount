@@ -8,7 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7F0BB133
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transactions", "Transactions", "{4E3FCC48-B6B3-4C53-8D2F-B260D502193C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users", "Users", "{1C2D4E20-90E0-4A10-BA7D-34DA690A376E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UsersManagement", "UsersManagement", "{1C2D4E20-90E0-4A10-BA7D-34DA690A376E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountApi.Users.Core", "BankAccountApi.Users.Core\BankAccountApi.Users.Core.csproj", "{7D4FE2E9-701C-4760-B33F-F90ED6D95058}"
 EndProject

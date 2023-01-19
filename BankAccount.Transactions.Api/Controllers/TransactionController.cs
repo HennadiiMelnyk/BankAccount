@@ -11,13 +11,11 @@ namespace BankAccount.Transactions.Api.Controllers
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
-    public class TransactionController : BaseController<CreateTransactionRequest>
+    public class TransactionController : ControllerBase
     {
         private ITransactionService _transactionService;
-        private readonly IValidator<CreateTransactionRequest> _validator;
-        public TransactionController(IValidator<CreateTransactionRequest> modelValidator, IValidator<CreateTransactionRequest> validator, ITransactionService transactionService) : base(modelValidator)
+        public TransactionController(ITransactionService transactionService)
         {
-            _validator = validator;
             _transactionService = transactionService;
         }
 
