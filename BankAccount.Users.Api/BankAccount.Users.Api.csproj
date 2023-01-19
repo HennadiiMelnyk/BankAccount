@@ -13,7 +13,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\BankAccount.Shared.Api\BankAccount.Shared.Api.csproj" />
+      <ProjectReference Include="..\BankAccount.Shared.Infrastructure\BankAccount.Shared.Infrastructure.csproj" />
       <ProjectReference Include="..\BankAccountApi.Users.Core\BankAccountApi.Users.Core.csproj" />
     </ItemGroup>
 

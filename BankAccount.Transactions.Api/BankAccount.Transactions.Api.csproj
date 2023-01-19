@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\BankAccount.Shared.Api\BankAccount.Shared.Api.csproj" />
+      <ProjectReference Include="..\BankAccount.Shared.Infrastructure\BankAccount.Shared.Infrastructure.csproj" />
       <ProjectReference Include="..\BankAccount.Transactions.Core\BankAccount.Transactions.Core.csproj" />
     </ItemGroup>
 

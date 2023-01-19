@@ -2,11 +2,9 @@
 using BankAccount.Shared.Application.Extensions;
 using BankAccount.Shared.Application.ResponseModels;
 using FluentValidation;
-using FluentValidation.Results;
-using Microsoft.AspNetCore.Mvc;
 using ValidationResult = FluentValidation.Results.ValidationResult;
 
-namespace BankAccount.Shared.Api.Controllers
+namespace BankAccount.Shared.Infrastructure.Controllers
 {
     /// <summary>
     /// Base controller.

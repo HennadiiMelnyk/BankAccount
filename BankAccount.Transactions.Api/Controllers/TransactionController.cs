@@ -1,5 +1,5 @@
-﻿using BankAccount.Shared.Api.Controllers;
-using BankAccount.Shared.Application.RequestModels;
+﻿using BankAccount.Shared.Application.RequestModels;
+using BankAccount.Shared.Infrastructure.Controllers;
 using BankAccount.Transactions.Core.Domain.Services.Contracts;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
