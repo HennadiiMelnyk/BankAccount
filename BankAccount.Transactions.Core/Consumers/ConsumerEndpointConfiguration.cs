@@ -3,6 +3,9 @@ using MassTransit.Configuration;
 
 namespace BankAccount.Transactions.Core.Consumers
 {
+    /// <summary>
+    /// Consumer definition.
+    /// </summary>
     public class ConsumerEndpointConfiguration : ConsumerDefinition<TransactionConsumer>
     {
         public ConsumerEndpointConfiguration()

@@ -7,7 +7,7 @@ namespace BankAccount.Shared.Infrastructure.Database.SqlServer.Extensions
 {
     public static class ServiceCollectionExtensions
     {
-        internal static IServiceCollection AddSqlServer(this IServiceCollection services, string sectionName)
+        internal static IServiceCollection AddSql(this IServiceCollection services, string sectionName)
         {
             var options = services.GetSettings<ConfigurationsSection>(sectionName);
             services.AddSingleton(options);
@@ -16,7 +16,7 @@ namespace BankAccount.Shared.Infrastructure.Database.SqlServer.Extensions
         }
     
     
-        public static IServiceCollection AddSqlServer<T>(this IServiceCollection services,
+        public static IServiceCollection AddSql<T>(this IServiceCollection services,
             string sectionName) where T : DbContext
         {
             var options = services.GetSettings<ConfigurationsSection>(sectionName);

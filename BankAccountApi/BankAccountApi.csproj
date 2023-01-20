@@ -6,4 +6,9 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\BankAccount.Transactions.Api\BankAccount.Transactions.Api.csproj" />
+      <ProjectReference Include="..\BankAccount.Users.Api\BankAccount.Users.Api.csproj" />
+    </ItemGroup>
+
 </Project>

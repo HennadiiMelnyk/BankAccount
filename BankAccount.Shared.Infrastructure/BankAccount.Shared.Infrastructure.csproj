@@ -27,7 +27,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Extensions" />
+      <Folder Include="Controllers" />
     </ItemGroup>
 
 </Project>

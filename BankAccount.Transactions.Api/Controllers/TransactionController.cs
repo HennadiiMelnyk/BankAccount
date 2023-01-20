@@ -1,7 +1,6 @@
-﻿using BankAccount.Shared.Application.RequestModels;
-using BankAccount.Shared.Infrastructure.Controllers;
-using BankAccount.Transactions.Core.Domain.Services.Contracts;
-using FluentValidation;
+﻿using BankAccount.Transactions.Core.Domain.Services.Contracts;
+using BankAccount.Transactions.Core.ResponseModels;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BankAccount.Transactions.Api.Controllers
@@ -19,8 +18,9 @@ namespace BankAccount.Transactions.Api.Controllers
             _transactionService = transactionService;
         }
 
-        [HttpGet]
+        [HttpGet($"/users/"+"{userId:guid}")]
         [Produces("application/json")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(TransactionResponseModel))]
         public async Task<IActionResult> GetUserTransaction([FromRoute] Guid userId, CancellationToken ct)
         {
             return Ok(await _transactionService.GetTransactionsForUserAsync(userId, ct));

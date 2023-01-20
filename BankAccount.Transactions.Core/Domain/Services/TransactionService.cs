@@ -2,8 +2,8 @@
 using BankAccount.Shared.Application.RequestModels;
 using BankAccount.Transactions.Core.Domain.Entities;
 using BankAccount.Transactions.Core.Domain.Services.Contracts;
-using BankAccount.Transactions.Core.Models.ResponseModels;
 using BankAccount.Transactions.Core.Repositories.Contracts;
+using BankAccount.Transactions.Core.ResponseModels;
 
 namespace BankAccount.Transactions.Core.Domain.Services
 {
@@ -18,7 +18,7 @@ namespace BankAccount.Transactions.Core.Domain.Services
             _autoMapper = autoMapper;
         }
 
-        public async Task<IReadOnlyCollection<TransactionResponseModel>> GetTransactionsForUserAsync(Guid userId, CancellationToken ct)
+        public async Task<List<TransactionResponseModel>> GetTransactionsForUserAsync(Guid userId, CancellationToken ct)
         {
             var transactions = await _transactionRepository.GetByUserId(userId, ct);
 

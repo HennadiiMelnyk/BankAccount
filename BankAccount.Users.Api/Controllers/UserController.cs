@@ -1,9 +1,7 @@
-﻿using BankAccount.Shared.Application.RequestModels;
-using BankAccount.Shared.Application.RequestModelValidators;
-using BankAccount.Shared.Application.ResponseModels;
-using BankAccount.Shared.Infrastructure.Controllers;
-using BankAccountApi.Accounts.Core.Domain.Services.Contracts;
-using FluentValidation;
+﻿using BankAccountApi.Accounts.Core.Domain.Services.Contracts;
+using BankAccountApi.Accounts.Core.RequestModels;
+using BankAccountApi.Accounts.Core.RequestModelsValidators;
+using BankAccountApi.Accounts.Core.ResponseModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,12 +15,10 @@ namespace BankAccountApi.Accounts.Api.Controllers;
 public class UserController : ControllerBase
 {
     private readonly IUserService _userService;
-    private readonly IValidator<UserRequestModel> _userFilterRequestValidator;
 
-    public UserController(IUserService userService, IValidator<UserRequestModel> userFilterRequestValidator)
+    public UserController(IUserService userService)
     {
         _userService = userService;
-        _userFilterRequestValidator = userFilterRequestValidator;
     }
 
 
