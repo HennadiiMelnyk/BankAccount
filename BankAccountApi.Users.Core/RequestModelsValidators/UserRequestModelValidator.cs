@@ -7,8 +7,8 @@ namespace BankAccountApi.Accounts.Core.RequestModelsValidators
     {
         public UserRequestModelValidator()
         {
-            RuleFor(x => x.CustomerId).NotNull().NotEmpty();
-            RuleFor(x => x.InitialCredit).GreaterThanOrEqualTo(0).WithMessage("Initial credit could not be less than 0");
+            RuleFor(x => x.CustomerId).NotNull().NotEmpty().WithMessage("Customer Id cannot be null.");
+            RuleFor(x => x.InitialCredit).GreaterThanOrEqualTo(0).WithMessage("Initial credit could not be less than 0.");
         }
     }
 }

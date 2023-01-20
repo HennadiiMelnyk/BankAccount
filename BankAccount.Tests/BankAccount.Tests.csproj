@@ -13,11 +13,18 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\BankAccount.Transactions.Api\BankAccount.Transactions.Api.csproj" />
+      <ProjectReference Include="..\BankAccount.Users.Api\BankAccount.Users.Api.csproj" />
       <ProjectReference Include="..\BankAccountApi.Users.Core\BankAccountApi.Users.Core.csproj" />
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="FluentAssertions" Version="6.9.0" />
+      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
       <PackageReference Include="Moq" Version="4.18.4" />
+      <PackageReference Include="MSTest.TestFramework" Version="3.0.2" />
+      <PackageReference Include="NUnit" Version="3.13.3" />
+      <PackageReference Include="xunit" Version="2.4.2" />
     </ItemGroup>
 
 </Project>
