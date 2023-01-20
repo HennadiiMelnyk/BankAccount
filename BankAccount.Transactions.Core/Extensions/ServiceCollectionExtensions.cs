@@ -22,6 +22,7 @@ namespace BankAccount.Transactions.Core.Extensions
             services.AddScoped<ITransactionService, TransactionService>();
         
             services.AddSql<TransactionDbContext>(TransactionDbSettingsSectionName);
+            services.AddControllers();
         
             services.AddRabbitMqWithConsumer<TransactionConsumer, ConsumerEndpointConfiguration>();
 

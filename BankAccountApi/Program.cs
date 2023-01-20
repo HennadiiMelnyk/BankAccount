@@ -1,3 +1,4 @@
+using BankAccount.Shared.Application.Middlewares;
 using BankAccount.Shared.Infrastructure.Extensions;
 using BankAccount.Transactions.Api;
 using BankAccountApi.Accounts.Api;
@@ -19,6 +20,7 @@ app.UseRouting();
 
 app.UseUsersModule();
 app.UseTransactionsModule();
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 
 app.UseEndpoints(endpoints =>

@@ -20,11 +20,10 @@ namespace BankAccountApi.Accounts.Core.Extensions
             services.AddAutoMapper(typeof(UserMappingProfile));
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
-        
-        
-            services.AddSql<UsersDbContext>(UserDbSettingsSectionName);
 
-            services.AddFluentValidation(fv =>
+            services.AddSql<UsersDbContext>(UserDbSettingsSectionName);
+            
+            services.AddControllers().AddFluentValidation(fv =>
             {
                 fv.ImplicitlyValidateChildProperties = true;
                 fv.ImplicitlyValidateRootCollectionElements = true;
