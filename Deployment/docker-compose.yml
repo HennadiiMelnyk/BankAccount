@@ -1,0 +1,48 @@
+version: "3.2"
+networks:
+  bankaccount:
+    driver: bridge
+
+services:
+  bankaccount-rabbitmq:
+    container_name: rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    image: rabbitmq:3-management
+    networks:
+      - bankaccount
+  
+  bankaccount-mssql-db:
+    image: 'mcr.microsoft.com/mssql/server'
+    ports:
+      - '1433:1433'
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Secret1234
+    volumes:
+      - './drive:/var/opt/mssql'
+  
+  bankaccount-api:
+    container_name: bankaccount-api
+    ports:
+      - 8010:80
+    image: bankaccount-api:latest
+    build:
+      context: ../src
+      dockerfile: BankAccountApi/Dockerfile
+    restart: on-failure
+    links:
+      - bankaccount-mssql-db
+      - bankaccount-rabbitmq
+    depends_on:
+      - bankaccount-mssql-db
+      - bankaccount-rabbitmq
+    networks:
+      - bankaccount
+
+volumes:
+  bankaccount-data:
