@@ -7,7 +7,7 @@ on:
     branches: [ "master" ]
   
 jobs:
-  build: 
+  build-and-deploy: 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -34,5 +34,29 @@ jobs:
         with:
           name: back-app
           path: bin/Debug/net6.0/publish/
+    
+      - name: 'Login via Azure CLI'
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          
+      - uses: azure/docker-login@v1
+        with:
+          login-server: bankapphenn.azurecr.io
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
+      - run: |
+          docker build . -t bankapphenn.azurecr.io/myapp:${{ github.sha }}
+          docker push bankapphenn.azurecr.io/myapp:${{ github.sha }}     
+      
+      - uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'myapp'
+          images: 'bankapphenn.azurecr.io/myapp:${{ github.sha }}'
+    
+      - name: Azure logout
+        run: |
+          az logout
+
 
     
