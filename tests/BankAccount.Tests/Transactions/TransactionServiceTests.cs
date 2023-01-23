@@ -1,5 +1,4 @@
-﻿using System.Security.Cryptography;
-using AutoMapper;
+﻿using AutoMapper;
 using BankAccount.Shared.Application.Models;
 using BankAccount.Shared.Application.RequestModels;
 using BankAccount.Transactions.Core.Domain.Entities;
@@ -10,7 +9,6 @@ using BankAccount.Transactions.Core.Repositories.Contracts;
 using BankAccount.Transactions.Core.ResponseModels;
 using FluentAssertions;
 using Moq;
-using NUnit.Framework;
 using Xunit;
 
 namespace BankAccount.Tests.Transactions

@@ -14,14 +14,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\BankAccount.Shared.Application\BankAccount.Shared.Application.csproj" />
-      <ProjectReference Include="..\BankAccount.Shared.Infrastructure\BankAccount.Shared.Infrastructure.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Reference Include="MassTransit.Abstractions">
-        <HintPath>..\..\..\.nuget\packages\masstransit.abstractions\8.0.11-develop.844\lib\net6.0\MassTransit.Abstractions.dll</HintPath>
-      </Reference>
+      <ProjectReference Include="..\..\..\shared\BankAccount.Shared.Application\BankAccount.Shared.Application.csproj" />
+      <ProjectReference Include="..\..\..\shared\BankAccount.Shared.Infrastructure\BankAccount.Shared.Infrastructure.csproj" />
     </ItemGroup>
 
     <ItemGroup>

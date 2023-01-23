@@ -3,7 +3,7 @@ using BankAccountApi.Accounts.Core.RequestModelsValidators;
 using FluentValidation.TestHelper;
 using NUnit.Framework;
 
-namespace BankAccount.Tests.Users
+namespace BankAccount.Tests.UserManagement
 {
     public class UserRequestModelValidatorTests
     {

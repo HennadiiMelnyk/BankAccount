@@ -1,4 +1,4 @@
-﻿namespace BankAccountApi.Accounts.Core.Constants;
+﻿namespace BankAccount.Shared.Application.Constants;
 
 public class ErrorMessageConstants
 {

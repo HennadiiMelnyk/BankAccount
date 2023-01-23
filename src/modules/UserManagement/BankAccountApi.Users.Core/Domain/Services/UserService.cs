@@ -1,10 +1,9 @@
 ﻿using System.Net;
 using AutoMapper;
+using BankAccount.Shared.Application.Constants;
 using BankAccount.Shared.Application.Exceptions;
 using BankAccount.Shared.Application.Models;
 using BankAccount.Shared.Application.RequestModels;
-using BankAccount.Transactions.Core.Domain.Entities;
-using BankAccountApi.Accounts.Core.Constants;
 using BankAccountApi.Accounts.Core.Domain.Services.Contracts;
 using BankAccountApi.Accounts.Core.Entities;
 using BankAccountApi.Accounts.Core.Repositories.Contracts;

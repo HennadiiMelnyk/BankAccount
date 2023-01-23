@@ -11,11 +11,10 @@ using FluentAssertions;
 using MassTransit;
 using Microsoft.Extensions.Logging;
 using Moq;
-using NUnit.Framework;
 using Xunit;
 using Assert = Xunit.Assert;
 
-namespace BankAccount.Tests.Users
+namespace BankAccount.Tests.UserManagement
 {
     public class UserServiceTests
     {

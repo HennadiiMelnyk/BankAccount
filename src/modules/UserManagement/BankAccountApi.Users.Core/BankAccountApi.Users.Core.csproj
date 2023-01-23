@@ -20,8 +20,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\BankAccount.Shared.Application\BankAccount.Shared.Application.csproj" />
-      <ProjectReference Include="..\BankAccount.Transactions.Core\BankAccount.Transactions.Core.csproj" />
+      <ProjectReference Include="..\..\..\shared\BankAccount.Shared.Application\BankAccount.Shared.Application.csproj" />
+      <ProjectReference Include="..\..\..\shared\BankAccount.Shared.Infrastructure\BankAccount.Shared.Infrastructure.csproj" />
     </ItemGroup>
 
     <ItemGroup>

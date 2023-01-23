@@ -10,12 +10,17 @@
       <Reference Include="AutoMapper">
         <HintPath>..\..\..\.nuget\packages\automapper\12.0.1\lib\netstandard2.1\AutoMapper.dll</HintPath>
       </Reference>
+      <Reference Include="Microsoft.AspNetCore.Mvc.Core">
+        <HintPath>..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.13\Microsoft.AspNetCore.Mvc.Core.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\BankAccount.Transactions.Api\BankAccount.Transactions.Api.csproj" />
-      <ProjectReference Include="..\BankAccount.Users.Api\BankAccount.Users.Api.csproj" />
-      <ProjectReference Include="..\BankAccountApi.Users.Core\BankAccountApi.Users.Core.csproj" />
+      <ProjectReference Include="..\..\src\modules\Transactions\BankAccount.Transactions.Api\BankAccount.Transactions.Api.csproj" />
+      <ProjectReference Include="..\..\src\modules\Transactions\BankAccount.Transactions.Core\BankAccount.Transactions.Core.csproj" />
+      <ProjectReference Include="..\..\src\modules\UserManagement\BankAccount.Users.Api\BankAccount.Users.Api.csproj" />
+      <ProjectReference Include="..\..\src\modules\UserManagement\BankAccountApi.Users.Core\BankAccountApi.Users.Core.csproj" />
+      <ProjectReference Include="..\..\src\shared\BankAccount.Shared.Application\BankAccount.Shared.Application.csproj" />
     </ItemGroup>
 
     <ItemGroup>

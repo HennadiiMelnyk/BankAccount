@@ -1,17 +1,12 @@
-﻿using System.Net;
-using BankAccountApi.Accounts.Api.Controllers;
+﻿using BankAccountApi.Accounts.Api.Controllers;
 using BankAccountApi.Accounts.Core.Domain.Services.Contracts;
-using BankAccountApi.Accounts.Core.Entities;
-using BankAccountApi.Accounts.Core.RequestModels;
 using BankAccountApi.Accounts.Core.ResponseModels;
-using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
-using NUnit.Framework;
 using Xunit;
 using Assert = Xunit.Assert;
 
-namespace BankAccount.Tests.Users
+namespace BankAccount.Tests.UserManagement
 {
     public class UserControllerTests
     {

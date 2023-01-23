@@ -1,6 +1,4 @@
-﻿using BankAccount.Shared.Application.Models;
-using BankAccount.Transactions.Api.Controllers;
-using BankAccount.Transactions.Core.Domain.Entities;
+﻿using BankAccount.Transactions.Api.Controllers;
 using BankAccount.Transactions.Core.Domain.Services.Contracts;
 using BankAccount.Transactions.Core.ResponseModels;
 using Microsoft.AspNetCore.Mvc;

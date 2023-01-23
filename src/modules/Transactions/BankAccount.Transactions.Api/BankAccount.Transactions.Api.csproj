@@ -8,8 +8,17 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\BankAccount.Shared.Infrastructure\BankAccount.Shared.Infrastructure.csproj" />
+      <Reference Include="Microsoft.AspNetCore.Mvc.Core">
+        <HintPath>..\..\..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.13\Microsoft.AspNetCore.Mvc.Core.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
       <ProjectReference Include="..\BankAccount.Transactions.Core\BankAccount.Transactions.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     </ItemGroup>
 
 </Project>

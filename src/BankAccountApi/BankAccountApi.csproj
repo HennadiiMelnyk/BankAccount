@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\modules\Transactions\BankAccount.Transactions.Api\BankAccount.Transactions.Api.csproj" />
+      <ProjectReference Include="..\modules\UserManagement\BankAccount.Users.Api\BankAccount.Users.Api.csproj" />
+      <ProjectReference Include="..\shared\BankAccount.Shared.Infrastructure\BankAccount.Shared.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>

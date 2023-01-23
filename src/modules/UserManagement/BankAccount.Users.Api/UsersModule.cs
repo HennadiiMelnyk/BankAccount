@@ -1,4 +1,4 @@
-﻿using BankAccount.Transactions.Core.Extensions;
+﻿using BankAccountApi.Accounts.Core.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
