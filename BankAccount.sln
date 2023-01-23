@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountApi", "BankAccountApi\BankAccountApi.csproj", "{A3206C23-67CD-48FE-9BDE-4DB5AE867F08}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountApi", "src\BankAccountApi\BankAccountApi.csproj", "{A3206C23-67CD-48FE-9BDE-4DB5AE867F08}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7D152CBE-E7A3-4952-A470-8799F40A745D}"
 EndProject
@@ -10,21 +10,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transactions", "Transaction
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UsersManagement", "UsersManagement", "{1C2D4E20-90E0-4A10-BA7D-34DA690A376E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountApi.Users.Core", "BankAccountApi.Users.Core\BankAccountApi.Users.Core.csproj", "{7D4FE2E9-701C-4760-B33F-F90ED6D95058}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountApi.Users.Core", "src\modules\UserManagement\BankAccountApi.Users.Core\BankAccountApi.Users.Core.csproj", "{7D4FE2E9-701C-4760-B33F-F90ED6D95058}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Users.Api", "BankAccount.Users.Api\BankAccount.Users.Api.csproj", "{2BBEA7ED-9C8E-4D19-A587-A8AAF86EF56E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Users.Api", "src\modules\UserManagement\BankAccount.Users.Api\BankAccount.Users.Api.csproj", "{2BBEA7ED-9C8E-4D19-A587-A8AAF86EF56E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{BF0929A4-907C-414B-AA8B-757D6B6249A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Shared.Application", "BankAccount.Shared.Application\BankAccount.Shared.Application.csproj", "{8F61CE30-566E-4506-828F-E3459AE578D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Shared.Application", "src\shared\BankAccount.Shared.Application\BankAccount.Shared.Application.csproj", "{8F61CE30-566E-4506-828F-E3459AE578D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Transactions.Core", "BankAccount.Transactions.Core\BankAccount.Transactions.Core.csproj", "{DE9946EA-D3B1-40BD-A34E-8A8884657C0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Transactions.Core", "src\modules\Transactions\BankAccount.Transactions.Core\BankAccount.Transactions.Core.csproj", "{DE9946EA-D3B1-40BD-A34E-8A8884657C0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Transactions.Api", "BankAccount.Transactions.Api\BankAccount.Transactions.Api.csproj", "{2B4624B1-18F3-4EF9-B193-26DAC917B8DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Transactions.Api", "src\modules\Transactions\BankAccount.Transactions.Api\BankAccount.Transactions.Api.csproj", "{2B4624B1-18F3-4EF9-B193-26DAC917B8DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Shared.Infrastructure", "BankAccount.Shared.Infrastructure\BankAccount.Shared.Infrastructure.csproj", "{8850DEF5-9F38-4009-B51F-FE8AA7670B25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Shared.Infrastructure", "src\shared\BankAccount.Shared.Infrastructure\BankAccount.Shared.Infrastructure.csproj", "{8850DEF5-9F38-4009-B51F-FE8AA7670B25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Tests", "BankAccount.Tests\BankAccount.Tests.csproj", "{233A5F0C-B161-4E6C-9846-841BF9F88F6E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Tests", "tests\BankAccount.Tests\BankAccount.Tests.csproj", "{233A5F0C-B161-4E6C-9846-841BF9F88F6E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "modules", "modules", "{2C9DADCD-0D09-4690-81C9-B403CFB240C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,8 +69,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A3206C23-67CD-48FE-9BDE-4DB5AE867F08} = {7D152CBE-E7A3-4952-A470-8799F40A745D}
-		{4E3FCC48-B6B3-4C53-8D2F-B260D502193C} = {7D152CBE-E7A3-4952-A470-8799F40A745D}
-		{1C2D4E20-90E0-4A10-BA7D-34DA690A376E} = {7D152CBE-E7A3-4952-A470-8799F40A745D}
 		{7D4FE2E9-701C-4760-B33F-F90ED6D95058} = {1C2D4E20-90E0-4A10-BA7D-34DA690A376E}
 		{2BBEA7ED-9C8E-4D19-A587-A8AAF86EF56E} = {1C2D4E20-90E0-4A10-BA7D-34DA690A376E}
 		{8F61CE30-566E-4506-828F-E3459AE578D9} = {BF0929A4-907C-414B-AA8B-757D6B6249A6}
@@ -76,5 +76,9 @@ Global
 		{2B4624B1-18F3-4EF9-B193-26DAC917B8DE} = {4E3FCC48-B6B3-4C53-8D2F-B260D502193C}
 		{8850DEF5-9F38-4009-B51F-FE8AA7670B25} = {BF0929A4-907C-414B-AA8B-757D6B6249A6}
 		{233A5F0C-B161-4E6C-9846-841BF9F88F6E} = {7F0BB133-0151-426E-AEF0-EF5A93C27DDB}
+		{BF0929A4-907C-414B-AA8B-757D6B6249A6} = {7D152CBE-E7A3-4952-A470-8799F40A745D}
+		{2C9DADCD-0D09-4690-81C9-B403CFB240C1} = {7D152CBE-E7A3-4952-A470-8799F40A745D}
+		{4E3FCC48-B6B3-4C53-8D2F-B260D502193C} = {2C9DADCD-0D09-4690-81C9-B403CFB240C1}
+		{1C2D4E20-90E0-4A10-BA7D-34DA690A376E} = {2C9DADCD-0D09-4690-81C9-B403CFB240C1}
 	EndGlobalSection
 EndGlobal
