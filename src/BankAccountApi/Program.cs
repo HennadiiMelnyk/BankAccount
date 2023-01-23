@@ -6,8 +6,6 @@ using BankAccountApi.Accounts.Api;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-//app.MapGet("/", () => "Hello World!");
-
 app.Run();
 builder.Services.AddSharedInfrastructure();
 builder.Services.AddUsersModule();
@@ -27,7 +25,7 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
     endpoints.MapGet("/", 
-        context => context.Response.WriteAsync("BanAccount API"));
+        context => context.Response.WriteAsync("BankAccount API"));
 });
 
 app.Run();
