@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transactions", "Transaction
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UsersManagement", "UsersManagement", "{1C2D4E20-90E0-4A10-BA7D-34DA690A376E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountApi.Users.Core", "src\modules\UserManagement\BankAccountApi.Users.Core\BankAccountApi.Users.Core.csproj", "{7D4FE2E9-701C-4760-B33F-F90ED6D95058}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Users.Core", "src\modules\UserManagement\BankAccount.Users.Core\BankAccount.Users.Core.csproj", "{7D4FE2E9-701C-4760-B33F-F90ED6D95058}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Users.Api", "src\modules\UserManagement\BankAccount.Users.Api\BankAccount.Users.Api.csproj", "{2BBEA7ED-9C8E-4D19-A587-A8AAF86EF56E}"
 EndProject

@@ -5,13 +5,20 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
+
 COPY ["BankAccountApi/BankAccountApi.csproj", "BankAccountApi/"]
-COPY ["BankAccount.Transactions.Api/BankAccount.Transactions.Api.csproj", "BankAccount.Transactions.Api/"]
-COPY ["BankAccount.Shared.Infrastructure/BankAccount.Shared.Infrastructure.csproj", "BankAccount.Shared.Infrastructure/"]
-COPY ["BankAccount.Shared.Application/BankAccount.Shared.Application.csproj", "BankAccount.Shared.Application/"]
-COPY ["BankAccount.Transactions.Core/BankAccount.Transactions.Core.csproj", "BankAccount.Transactions.Core/"]
-COPY ["BankAccount.Users.Api/BankAccount.Users.Api.csproj", "BankAccount.Users.Api/"]
-COPY ["BankAccountApi.Users.Core/BankAccountApi.Users.Core.csproj", "BankAccountApi.Users.Core/"]
+
+COPY ["modules/Transactions/BankAccount.Transactions.Api/BankAccount.Transactions.Api.csproj", "modules/Transactions/BankAccount.Transactions.Api/"]
+COPY ["modules/Transactions/BankAccount.Transactions.Core/BankAccount.Transactions.Core.csproj", "modules/Transactions/BankAccount.Transactions.Core/"]
+
+
+COPY ["shared/BankAccount.Shared.Application/BankAccount.Shared.Application.csproj", "shared/BankAccount.Shared.Application/"]
+COPY ["shared/BankAccount.Shared.Infrastructure/BankAccount.Shared.Infrastructure.csproj", "shared/BankAccount.Shared.Infrastructure/"]
+
+COPY ["modules/UserManagement/BankAccount.Users.Api/BankAccount.Users.Api.csproj", "modules/UserManagement/BankAccount.Users.Api/"]
+COPY ["modules/UserManagement/BankAccount.Users.Core/BankAccount.Users.Core.csproj", "modules/UserManagement/BankAccount.Users.Core/"]
+
+
 RUN dotnet restore "BankAccountApi/BankAccountApi.csproj"
 COPY . .
 WORKDIR "/src/BankAccountApi"
