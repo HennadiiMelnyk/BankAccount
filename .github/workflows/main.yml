@@ -50,14 +50,9 @@ jobs:
         run: 
           docker build . -t bankapphenn.azurecr.io/myapp:${{ github.sha }}
           
-      - name: Push frontend image
+      - name: Push docker image
         run:
           docker push bankapphenn.azurecr.io/myapp:${{ github.sha }}     
-      
-      - uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'myapp'
-          images: 'bankapphenn.azurecr.io/myapp:${{ github.sha }}'
     
       - name: Azure logout
         run: |
