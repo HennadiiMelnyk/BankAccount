@@ -48,7 +48,7 @@ jobs:
           
       - name: Build docker image
         run: 
-          cd src/BankAccountApi/
+          cd src\BankAccountApi
           docker build -t bankapphenn.azurecr.io/myapp:${{ github.sha }}
           
       - name: Push frontend image
