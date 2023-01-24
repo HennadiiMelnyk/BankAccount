@@ -46,7 +46,7 @@ jobs:
           username: ${{ secrets.ACR_USERNAME }}
           password: ${{ secrets.ACR_PASSWORD }}
       - run: |
-          docker build . -t bankapphenn.azurecr.io/myapp:${{ github.sha }}
+          docker build ./src/BankAccountApi/ --file Dockerfile -t bankapphenn.azurecr.io/myapp:${{ github.sha }}
           docker push bankapphenn.azurecr.io/myapp:${{ github.sha }}     
       
       - uses: azure/webapps-deploy@v2
